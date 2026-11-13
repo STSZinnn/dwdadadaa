@@ -1,0 +1,1983 @@
+design-status: Working foundation; unimplemented proposals are previews only, no fabricated finished mechanics.
+classes:
+  MINER:
+    name: Miner
+    category: GRINDING
+    icon: IRON_PICKAXE
+    allocation-cap: 30
+    branch-cap: 15
+    branches:
+      excavation:
+        label: Excavation
+        nodes:
+          quick-hands:
+            name: Quick Hands
+            max-rank: 5
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: +2% mining speed per rank.
+            prerequisites: []
+            implemented: false
+          stone-breaker:
+            name: Stone Breaker
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: +4% mining speed against stone and deepslate per rank.
+            prerequisites: []
+            implemented: false
+          efficient-swing:
+            name: Efficient Swing
+            max-rank: 5
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: Pickaxes lose 3% less durability per rank while mining blocks.
+            prerequisites: []
+            implemented: false
+          demolition-expert:
+            name: Demolition Expert
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: +5% mining speed against deepslate per rank.
+            prerequisites: []
+            implemented: false
+          tunnel-vision:
+            name: Tunnel Vision
+            max-rank: 1
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: 'Gain Haste I while underground (suggested check: below Y=0).'
+            prerequisites: []
+            implemented: false
+          excavation-master:
+            name: Excavation Master
+            max-rank: 1
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: Small chance for eligible stone blocks to break instantly.
+            prerequisites: []
+            implemented: false
+          earthshaper:
+            name: Earthshaper
+            max-rank: 1
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: Temporarily increases mining speed further after breaking several
+            prerequisites: []
+            implemented: false
+      prospecting:
+        label: Prospecting
+        nodes:
+          lucky-find:
+            name: Lucky Find
+            max-rank: 5
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: +2% chance per rank for eligible ores to drop one extra resource.
+            prerequisites: []
+            implemented: false
+          geologist:
+            name: Geologist
+            max-rank: 5
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: +4% Miner XP from mining ores per rank.
+            prerequisites: []
+            implemented: false
+          gold-rush:
+            name: Gold Rush
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: +5% bonus gold-ore drop chance per rank.
+            prerequisites: []
+            implemented: false
+          diamond-eye:
+            name: Diamond Eye
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: +2% bonus diamond-ore drop chance per rank.
+            prerequisites: []
+            implemented: false
+          emerald-hunter:
+            name: Emerald Hunter
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: +2% bonus emerald-ore drop chance per rank.
+            prerequisites: []
+            implemented: false
+          treasure-seeker:
+            name: Treasure Seeker
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: Small chance to receive a configured bonus mining loot item.
+            prerequisites: []
+            implemented: false
+          fortune-s-favor:
+            name: Fortune's Favor
+            max-rank: 1
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: Rare ores have a small chance to produce an additional resource.
+            prerequisites: []
+            implemented: false
+          prospector-s-legacy:
+            name: Prospector's Legacy
+            max-rank: 1
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: Mining rare ores grants a short stacking Prospector bonus, increasing
+            prerequisites: []
+            implemented: false
+      craftsmanship:
+        label: Craftsmanship
+        nodes:
+          durable-tools:
+            name: Durable Tools
+            max-rank: 5
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: Pickaxes lose 3% less durability per rank.
+            prerequisites: []
+            implemented: false
+          natural-smelting:
+            name: Natural Smelting
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: Chance for eligible ores to drop their smelted form.
+            prerequisites: []
+            implemented: false
+          repairman:
+            name: Repairman
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: Small chance to restore 1 durability when mining an ore.
+            prerequisites: []
+            implemented: false
+          resourceful:
+            name: Resourceful
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: Small chance to save one ingredient when crafting configured mining
+            prerequisites: []
+            implemented: false
+          reinforced-pickaxe:
+            name: Reinforced Pickaxe
+            max-rank: 5
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: +2% maximum pickaxe durability per rank, if supported by the server.
+            prerequisites: []
+            implemented: false
+          experienced-smith:
+            name: Experienced Smith
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: Reduce anvil XP cost for eligible pickaxe repairs/upgrades by 5% per rank.
+            prerequisites: []
+            implemented: false
+          master-craftsman:
+            name: Master Craftsman
+            max-rank: 1
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: Small chance for a qualifying repair to cost fewer materials.
+            prerequisites: []
+            implemented: false
+          industrialist:
+            name: Industrialist
+            max-rank: 1
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: Natural Smelting chance is increased, and eligible smelted ore drops
+            prerequisites: []
+            implemented: false
+      deep-explorer:
+        label: Deep-Explorer
+        nodes:
+          lightweight:
+            name: Lightweight
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: Reduce fall damage by 5% per rank while underground.
+            prerequisites: []
+            implemented: false
+          cave-dweller:
+            name: Cave Dweller
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: Reduce damage from hostile mobs underground by 3% per rank.
+            prerequisites: []
+            implemented: false
+          underground-instinct:
+            name: Underground Instinct
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: Gain a small movement-speed bonus underground.
+            prerequisites: []
+            implemented: false
+          oxygen-efficiency:
+            name: Oxygen Efficiency
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: Improve underwater mining efficiency; does not grant unlimited breathing.
+            prerequisites: []
+            implemented: false
+          treasure-sense:
+            name: Treasure Sense
+            max-rank: 1
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: Periodically gives a subtle indicator when a configured structure chest
+            prerequisites: []
+            implemented: false
+          iron-stomach:
+            name: Iron Stomach
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: Reduce duration of selected environmental debuffs by 5% per rank.
+            prerequisites: []
+            implemented: false
+          master-explorer:
+            name: Master Explorer
+            max-rank: 1
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.02
+            description: 'Capstone concept: improves underground exploration feedback and movement; no Night Vision
+              potion effect.'
+            prerequisites: []
+            implemented: false
+          cave-acclimation:
+            name: Cave Acclimation
+            max-rank: 1
+            cost: 1
+            mechanic: visibility-option
+            value-per-rank: 0
+            description: Underground visibility comfort; never adds Night Vision. Placeholder until server-safe
+              design approved.
+            prerequisites: []
+            implemented: false
+    actives:
+      fortune-burst:
+        name: Fortune Burst
+        type: MINING_BONUS
+        cooldown-seconds: 90
+        duration-seconds: 6
+        description: Controlled ore yield burst (planned, natural ores only)
+        implemented: false
+        unlocked-by-default: false
+      overdrive:
+        name: Overdrive
+        type: HASTE
+        cooldown-seconds: 60
+        duration-seconds: 10
+        description: Haste III for 10 seconds
+        implemented: true
+        unlocked-by-default: true
+      industrial-smelting:
+        name: Industrial Smelting
+        type: AUTO_SMELT
+        cooldown-seconds: 90
+        duration-seconds: 6
+        description: Auto-smelt eligible natural ores (planned)
+        implemented: false
+        unlocked-by-default: false
+      ore-scanner:
+        name: Ore Scanner
+        type: SCAN
+        cooldown-seconds: 75
+        duration-seconds: 6
+        description: Short area scan (planned)
+        implemented: false
+        unlocked-by-default: false
+      reinforced-stance:
+        name: Reinforced Stance
+        type: SHIELD
+        cooldown-seconds: 75
+        duration-seconds: 6
+        description: Temporary Resistance I with cooldown
+        implemented: true
+        unlocked-by-default: true
+      emergency-excavation:
+        name: Emergency Excavation
+        type: EXCAVATE
+        cooldown-seconds: 90
+        duration-seconds: 6
+        description: Protection-safe excavation (planned)
+        implemented: false
+        unlocked-by-default: false
+  BOMBARDEER:
+    name: Bombardeer
+    category: PVP-GRIND
+    icon: TNT
+    allocation-cap: 30
+    branch-cap: 15
+    branches:
+      demolition:
+        label: Demolition
+        nodes:
+          controlled-demolition:
+            name: Controlled Demolition
+            max-rank: 3
+            cost: 1
+            mechanic: proposal
+            value-per-rank: 0.0
+            description: Proposal from the full compendium; no finalized balance or live mechanic.
+            prerequisites: []
+            implemented: false
+          structural-knowledge:
+            name: Structural Knowledge
+            max-rank: 3
+            cost: 1
+            mechanic: proposal
+            value-per-rank: 0.0
+            description: Proposal from the full compendium; no finalized balance or live mechanic.
+            prerequisites: []
+            implemented: false
+      salvaging:
+        label: Salvaging
+        nodes:
+          salvager:
+            name: Salvager
+            max-rank: 3
+            cost: 1
+            mechanic: proposal
+            value-per-rank: 0.0
+            description: Proposal from the full compendium; no finalized balance or live mechanic.
+            prerequisites: []
+            implemented: false
+      blastcraft:
+        label: Blastcraft
+        nodes:
+          fuse-specialist:
+            name: Fuse Specialist
+            max-rank: 1
+            cost: 1
+            mechanic: proposal
+            value-per-rank: 0.0
+            description: Proposal from the full compendium; no finalized balance or live mechanic.
+            prerequisites: []
+            implemented: false
+      blast-survival:
+        label: Blast-Survival
+        nodes:
+          blast-awareness:
+            name: Blast Awareness
+            max-rank: 3
+            cost: 1
+            mechanic: proposal
+            value-per-rank: 0.0
+            description: Proposal from the full compendium; no finalized balance or live mechanic.
+            prerequisites: []
+            implemented: false
+          explosive-discipline:
+            name: Explosive Discipline
+            max-rank: 3
+            cost: 1
+            mechanic: proposal
+            value-per-rank: 0.0
+            description: Proposal from the full compendium; no finalized balance or live mechanic.
+            prerequisites: []
+            implemented: false
+    actives:
+      quarry-burst:
+        name: Quarry Burst
+        type: EXCAVATE
+        cooldown-seconds: 90
+        duration-seconds: 6
+        description: Provisional Bombardeer ability
+        implemented: false
+        unlocked-by-default: false
+      salvage-pulse:
+        name: Salvage Pulse
+        type: SCAN
+        cooldown-seconds: 70
+        duration-seconds: 6
+        description: Provisional Bombardeer ability
+        implemented: false
+        unlocked-by-default: false
+      demolition-payday:
+        name: Demolition Payday
+        type: MINING_BONUS
+        cooldown-seconds: 100
+        duration-seconds: 6
+        description: Provisional Bombardeer ability
+        implemented: false
+        unlocked-by-default: false
+      shockwave:
+        name: Shockwave
+        type: KNOCKBACK
+        cooldown-seconds: 45
+        duration-seconds: 6
+        description: Provisional Bombardeer ability
+        implemented: false
+        unlocked-by-default: false
+      blast-shield:
+        name: Blast Shield
+        type: SHIELD
+        cooldown-seconds: 60
+        duration-seconds: 6
+        description: Provisional Bombardeer ability
+        implemented: false
+        unlocked-by-default: false
+      rocket-jump:
+        name: Rocket Jump
+        type: UPDRAFT
+        cooldown-seconds: 65
+        duration-seconds: 6
+        description: Provisional Bombardeer ability
+        implemented: false
+        unlocked-by-default: false
+  MELEE:
+    name: Melee
+    category: PVP
+    icon: IRON_SWORD
+    allocation-cap: 30
+    branch-cap: 15
+    branches:
+      weapon-mastery:
+        label: Weapon-Mastery
+        nodes:
+          sharp-handling:
+            name: Sharp Handling
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.03
+            description: Later PvP-focused Melee design; balance/proc provisional.
+            prerequisites: []
+            implemented: false
+          combo-rhythm:
+            name: Combo Rhythm
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.03
+            description: Later PvP-focused Melee design; balance/proc provisional.
+            prerequisites: []
+            implemented: false
+          finisher:
+            name: Finisher
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.03
+            description: Later PvP-focused Melee design; balance/proc provisional.
+            prerequisites: []
+            implemented: false
+          disarming-technique:
+            name: Disarming Technique
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.03
+            description: Later PvP-focused Melee design; balance/proc provisional.
+            prerequisites: []
+            implemented: false
+      defense:
+        label: Defense
+        nodes:
+          guarded:
+            name: Guarded
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.03
+            description: Later PvP-focused Melee design; balance/proc provisional.
+            prerequisites: []
+            implemented: true
+          iron-will:
+            name: Iron Will
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.03
+            description: Later PvP-focused Melee design; balance/proc provisional.
+            prerequisites: []
+            implemented: false
+          counterguard:
+            name: Counterguard
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.03
+            description: Later PvP-focused Melee design; balance/proc provisional.
+            prerequisites: []
+            implemented: false
+          last-stand:
+            name: Last Stand
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.03
+            description: Later PvP-focused Melee design; balance/proc provisional.
+            prerequisites: []
+            implemented: false
+      mobility:
+        label: Mobility
+        nodes:
+          chaser:
+            name: Chaser
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.03
+            description: Later PvP-focused Melee design; balance/proc provisional.
+            prerequisites: []
+            implemented: false
+          light-feet:
+            name: Light Feet
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.03
+            description: Later PvP-focused Melee design; balance/proc provisional.
+            prerequisites: []
+            implemented: false
+          pursuit:
+            name: Pursuit
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.03
+            description: Later PvP-focused Melee design; balance/proc provisional.
+            prerequisites: []
+            implemented: false
+          combat-roll:
+            name: Combat Roll
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.03
+            description: Later PvP-focused Melee design; balance/proc provisional.
+            prerequisites: []
+            implemented: false
+      adrenaline:
+        label: Adrenaline
+        nodes:
+          blood-rush:
+            name: Blood Rush
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.03
+            description: Later PvP-focused Melee design; balance/proc provisional.
+            prerequisites: []
+            implemented: false
+          battle-focus:
+            name: Battle Focus
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.03
+            description: Later PvP-focused Melee design; balance/proc provisional.
+            prerequisites: []
+            implemented: false
+          relentless:
+            name: Relentless
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.03
+            description: Later PvP-focused Melee design; balance/proc provisional.
+            prerequisites: []
+            implemented: false
+          unbreakable-spirit:
+            name: Unbreakable Spirit
+            max-rank: 3
+            cost: 1
+            mechanic: draft
+            value-per-rank: 0.03
+            description: Later PvP-focused Melee design; balance/proc provisional.
+            prerequisites: []
+            implemented: false
+    actives:
+      battle-focus:
+        name: Battle Focus
+        type: SHIELD
+        cooldown-seconds: 70
+        duration-seconds: 7
+        description: Temporary resistance and absorption
+        implemented: true
+        unlocked-by-default: true
+      second-wind:
+        name: Second Wind
+        type: HEAL
+        cooldown-seconds: 95
+        duration-seconds: 0
+        description: Small self-heal
+        implemented: true
+        unlocked-by-default: true
+  VILLAGER_MASTER:
+    name: Villager Master
+    category: GRINDING
+    icon: EMERALD
+    allocation-cap: 30
+    branch-cap: 15
+    branches:
+      negotiation:
+        label: Negotiation
+        nodes:
+          friendly-face:
+            name: Friendly Face
+            max-rank: 3
+            cost: 1
+            mechanic: trade-discount
+            value-per-rank: 0.02
+            description: Improve discounts from eligible villagers.
+            prerequisites: []
+            implemented: false
+          bulk-buyer:
+            name: Bulk Buyer
+            max-rank: 3
+            cost: 1
+            mechanic: trade-value
+            value-per-rank: 0.03
+            description: Increase the value of configured bulk trades.
+            prerequisites: []
+            implemented: false
+          fair-deal:
+            name: Fair Deal
+            max-rank: 3
+            cost: 1
+            mechanic: trade-discount
+            value-per-rank: 0.02
+            description: Reduce the emerald cost of selected trades.
+            prerequisites: []
+            implemented: false
+      village-network:
+        label: Village Network
+        nodes:
+          local-knowledge:
+            name: Local Knowledge
+            max-rank: 3
+            cost: 1
+            mechanic: villager-range
+            value-per-rank: 4.0
+            description: Improve detection of nearby villagers.
+            prerequisites: []
+            implemented: false
+          trade-memory:
+            name: Trade Memory
+            max-rank: 3
+            cost: 1
+            mechanic: restock-bonus
+            value-per-rank: 0.03
+            description: Villager trade restocks are more useful to you.
+            prerequisites: []
+            implemented: false
+          community-trust:
+            name: Community Trust
+            max-rank: 3
+            cost: 1
+            mechanic: village-defense
+            value-per-rank: 0.02
+            description: Receive a small defensive bonus near villagers.
+            prerequisites: []
+            implemented: false
+      merchant-logistics:
+        label: Merchant Logistics
+        nodes:
+          merchant-packing:
+            name: Merchant Packing
+            max-rank: 3
+            cost: 1
+            mechanic: bundle-capacity
+            value-per-rank: 1.0
+            description: Increase configured trade bundle capacity.
+            prerequisites: []
+            implemented: false
+          swift-delivery:
+            name: Swift Delivery
+            max-rank: 3
+            cost: 1
+            mechanic: trade-speed
+            value-per-rank: 1.0
+            description: Gain a brief speed boost after completing a trade.
+            prerequisites: []
+            implemented: false
+          stock-manager:
+            name: Stock Manager
+            max-rank: 3
+            cost: 1
+            mechanic: restock-bonus
+            value-per-rank: 0.04
+            description: Improve selected villager restock interactions.
+            prerequisites: []
+            implemented: false
+      prosperity:
+        label: Prosperity
+        nodes:
+          emerald-eye:
+            name: Emerald Eye
+            max-rank: 3
+            cost: 1
+            mechanic: emerald-bonus
+            value-per-rank: 0.03
+            description: Improve emerald rewards from configured activities.
+            prerequisites: []
+            implemented: false
+          reliable-client:
+            name: Reliable Client
+            max-rank: 3
+            cost: 1
+            mechanic: trade-value
+            value-per-rank: 0.02
+            description: Improve trade rewards with a frequently used villager.
+            prerequisites: []
+            implemented: false
+          market-insight:
+            name: Market Insight
+            max-rank: 3
+            cost: 1
+            mechanic: trade-discovery
+            value-per-rank: 0.03
+            description: Improve the chance of useful bonus trade offers.
+            prerequisites: []
+            implemented: false
+    actives:
+      merchant-call:
+        name: Merchant Call
+        type: SCAN
+        cooldown-seconds: 60
+        duration-seconds: 8
+        description: Reveal nearby villagers and mark them with particles.
+        implemented: true
+        unlocked-by-default: true
+        range: 24
+      golden-deal:
+        name: Golden Deal
+        type: POTION
+        cooldown-seconds: 90
+        duration-seconds: 12
+        description: Gain a short luck and regeneration boost after trading.
+        implemented: true
+        unlocked-by-default: true
+        potion-effect: LUCK
+        amplifier: 0
+  ARCHER:
+    name: Archer
+    category: PVP
+    icon: BOW
+    allocation-cap: 30
+    branch-cap: 15
+    branches:
+      field-awareness:
+        label: Field Awareness
+        nodes:
+          steady-breath:
+            name: Steady Breath
+            max-rank: 3
+            cost: 1
+            mechanic: buff-duration
+            value-per-rank: 0.04
+            description: Improve beneficial effect duration.
+            prerequisites: []
+            implemented: false
+          clear-view:
+            name: Clear View
+            max-rank: 3
+            cost: 1
+            mechanic: scout-range
+            value-per-rank: 4.0
+            description: Increase the range of scouting pulses.
+            prerequisites: []
+            implemented: false
+          keen-eye:
+            name: Keen Eye
+            max-rank: 3
+            cost: 1
+            mechanic: ranger-awareness
+            value-per-rank: 1.0
+            description: Scouting and marksmanship awareness concept, without Night Vision potion effects.
+            prerequisites: []
+            implemented: false
+      tracker:
+        label: Tracker
+        nodes:
+          trail-reader:
+            name: Trail Reader
+            max-rank: 3
+            cost: 1
+            mechanic: tracking-range
+            value-per-rank: 4.0
+            description: Improve scanning range.
+            prerequisites: []
+            implemented: false
+          keen-ear:
+            name: Keen Ear
+            max-rank: 3
+            cost: 1
+            mechanic: danger-range
+            value-per-rank: 3.0
+            description: Receive a subtle warning when a player approaches.
+            prerequisites: []
+            implemented: false
+          landmark-memory:
+            name: Landmark Memory
+            max-rank: 3
+            cost: 1
+            mechanic: scan-duration
+            value-per-rank: 0.05
+            description: Improve the duration of scouting effects.
+            prerequisites: []
+            implemented: false
+      mobility:
+        label: Mobility
+        nodes:
+          light-quiver:
+            name: Light Quiver
+            max-rank: 3
+            cost: 1
+            mechanic: movement-bonus
+            value-per-rank: 0.02
+            description: Gain a small movement bonus while exploring.
+            prerequisites: []
+            implemented: false
+          backstep:
+            name: Backstep
+            max-rank: 3
+            cost: 1
+            mechanic: movement-burst
+            value-per-rank: 1.0
+            description: Improve short movement bursts.
+            prerequisites: []
+            implemented: false
+          sure-footed:
+            name: Sure-Footed
+            max-rank: 3
+            cost: 1
+            mechanic: fall-resistance
+            value-per-rank: 0.04
+            description: Reduce fall damage slightly.
+            prerequisites: []
+            implemented: false
+      fieldcraft:
+        label: Fieldcraft
+        nodes:
+          supply-recovery:
+            name: Supply Recovery
+            max-rank: 3
+            cost: 1
+            mechanic: resource-bonus
+            value-per-rank: 0.03
+            description: Improve configured supply rewards.
+            prerequisites: []
+            implemented: false
+          field-rations:
+            name: Field Rations
+            max-rank: 3
+            cost: 1
+            mechanic: food-bonus
+            value-per-rank: 0.03
+            description: Food is slightly more effective.
+            prerequisites: []
+            implemented: false
+          long-watch:
+            name: Long Watch
+            max-rank: 3
+            cost: 1
+            mechanic: scan-duration
+            value-per-rank: 0.05
+            description: Improve scouting duration.
+            prerequisites: []
+            implemented: false
+    actives:
+      eagle-eye:
+        name: Eagle Eye
+        type: SCAN
+        cooldown-seconds: 65
+        duration-seconds: 8
+        description: Temporarily reveal nearby entities with a visual outline.
+        implemented: true
+        unlocked-by-default: true
+        range: 24
+      quickdraw:
+        name: Quickdraw
+        type: POTION
+        cooldown-seconds: 45
+        duration-seconds: 5
+        description: Gain a brief speed boost for repositioning.
+        implemented: true
+        unlocked-by-default: true
+        potion-effect: SPEED
+        amplifier: 1
+  GUARDIAN:
+    name: Guardian
+    category: PVP
+    icon: SHIELD
+    allocation-cap: 30
+    branch-cap: 15
+    branches:
+      bulwark:
+        label: Bulwark
+        nodes:
+          fortified:
+            name: Fortified
+            max-rank: 3
+            cost: 1
+            mechanic: damage-reduction
+            value-per-rank: 0.02
+            description: Reduce incoming player damage slightly.
+            prerequisites: []
+            implemented: true
+          shield-training:
+            name: Shield Training
+            max-rank: 3
+            cost: 1
+            mechanic: shield-bonus
+            value-per-rank: 0.03
+            description: Improve defensive timing with shields.
+            prerequisites: []
+            implemented: false
+          anchored:
+            name: Anchored
+            max-rank: 3
+            cost: 1
+            mechanic: knockback-resistance
+            value-per-rank: 0.04
+            description: Reduce knockback while blocking.
+            prerequisites: []
+            implemented: false
+      protector:
+        label: Protector
+        nodes:
+          nearby-guard:
+            name: Nearby Guard
+            max-rank: 3
+            cost: 1
+            mechanic: ally-defense
+            value-per-rank: 0.02
+            description: Nearby allies receive a small defensive benefit.
+            prerequisites: []
+            implemented: false
+          shared-cover:
+            name: Shared Cover
+            max-rank: 3
+            cost: 1
+            mechanic: support-duration
+            value-per-rank: 0.05
+            description: Improve the duration of your defensive support effects.
+            prerequisites: []
+            implemented: false
+          trusted-ward:
+            name: Trusted Ward
+            max-rank: 3
+            cost: 1
+            mechanic: trusted-support
+            value-per-rank: 0.03
+            description: Trusted allies receive stronger protection from your support effects.
+            prerequisites: []
+            implemented: false
+      vanguard:
+        label: Vanguard
+        nodes:
+          firm-ground:
+            name: Firm Ground
+            max-rank: 3
+            cost: 1
+            mechanic: knockback-resistance
+            value-per-rank: 0.04
+            description: Reduce knockback while near enemies.
+            prerequisites: []
+            implemented: false
+          intercept:
+            name: Intercept
+            max-rank: 3
+            cost: 1
+            mechanic: intercept-defense
+            value-per-rank: 0.02
+            description: Gain a small defensive bonus when an ally is targeted nearby.
+            prerequisites: []
+            implemented: false
+          unyielding:
+            name: Unyielding
+            max-rank: 3
+            cost: 1
+            mechanic: damage-reduction
+            value-per-rank: 0.02
+            description: Improve resistance after taking repeated hits.
+            prerequisites: []
+            implemented: false
+      recovery:
+        label: Recovery
+        nodes:
+          second-breath:
+            name: Second Breath
+            max-rank: 3
+            cost: 1
+            mechanic: recovery-bonus
+            value-per-rank: 0.03
+            description: Improve natural recovery effects.
+            prerequisites: []
+            implemented: false
+          steady-heart:
+            name: Steady Heart
+            max-rank: 3
+            cost: 1
+            mechanic: slow-resistance
+            value-per-rank: 0.04
+            description: Reduce the duration of eligible slowing effects.
+            prerequisites: []
+            implemented: false
+          last-stand:
+            name: Last Stand
+            max-rank: 3
+            cost: 1
+            mechanic: clutch-resistance
+            value-per-rank: 0.02
+            description: A cooldown-limited shield activates at low health.
+            prerequisites: []
+            implemented: false
+    actives:
+      shield-wall:
+        name: Shield Wall
+        type: SHIELD
+        cooldown-seconds: 85
+        duration-seconds: 6
+        description: Gain temporary resistance and absorption.
+        implemented: true
+        unlocked-by-default: true
+        absorption: 3
+      guardian-call:
+        name: Guardian Call
+        type: AREA_HEAL
+        cooldown-seconds: 90
+        duration-seconds: 5
+        description: Apply a short regeneration effect to yourself and trusted nearby allies.
+        implemented: true
+        unlocked-by-default: true
+        radius: 8
+  ASSASSIN:
+    name: Assassin
+    category: PVP
+    icon: ENDER_PEARL
+    allocation-cap: 30
+    branch-cap: 15
+    branches:
+      stealth:
+        label: Stealth
+        nodes:
+          silent-effects:
+            name: Silent Effects
+            max-rank: 1
+            cost: 1
+            mechanic: silent-effects
+            value-per-rank: 1
+            description: Suppress potion particle display on freshly applied effects.
+            prerequisites: []
+            implemented: false
+          silent-movement:
+            name: Silent Movement
+            max-rank: 1
+            cost: 1
+            mechanic: silent-movement
+            value-per-rank: 1
+            description: Selective sound attenuation for others requires packet-level integration.
+            prerequisites: []
+            implemented: false
+      ambush:
+        label: Ambush
+        nodes: {}
+      counterplay:
+        label: Counterplay
+        nodes: {}
+    actives:
+      true-invisibility:
+        name: True Invisibility
+        type: TRUE_INVIS
+        cooldown-seconds: 90
+        duration-seconds: 8
+        description: Server-managed player model hide, without damage immunity
+        implemented: true
+        unlocked-by-default: true
+      shadow-step:
+        name: Shadow Step
+        type: DASH
+        cooldown-seconds: 55
+        duration-seconds: 0
+        description: Stealth reposition concept; awaiting final design
+        implemented: false
+        unlocked-by-default: false
+  ALCHEMIST:
+    name: Alchemist
+    category: SUPPORT
+    icon: BREWING_STAND
+    allocation-cap: 30
+    branch-cap: 15
+    branches:
+      potion-mastery:
+        label: Potion Mastery
+        nodes:
+          potion-stacking:
+            name: Potion Stacking
+            max-rank: 1
+            cost: 1
+            mechanic: potion-stack-upgrade
+            value-per-rank: 1.0
+            description: Upgrade potion crafting so one potion can hold up to THREE different effects instead of
+              TWO. This is a single upgrade, not a multi-rank passive.
+            prerequisites: []
+            implemented: true
+          lasting-mixture:
+            name: Lasting Mixture
+            max-rank: 3
+            cost: 1
+            mechanic: potion-duration
+            value-per-rank: 0.04
+            description: Increase the duration of eligible custom potion effects.
+            prerequisites: []
+            implemented: false
+          clean-brew:
+            name: Clean Brew
+            max-rank: 3
+            cost: 1
+            mechanic: infusion-efficiency
+            value-per-rank: 0.05
+            description: Reduce waste when combining eligible potion effects.
+            prerequisites: []
+            implemented: false
+      infusion:
+        label: Infusion
+        nodes:
+          infusium-sense:
+            name: Infusium Sense
+            max-rank: 3
+            cost: 1
+            mechanic: infusium-find
+            value-per-rank: 0.03
+            description: Improve the chance of finding Infusium from eligible sources.
+            prerequisites: []
+            implemented: false
+          stable-reaction:
+            name: Stable Reaction
+            max-rank: 3
+            cost: 1
+            mechanic: infusion-success
+            value-per-rank: 0.03
+            description: Improve the reliability of potion combinations.
+            prerequisites: []
+            implemented: false
+          careful-dose:
+            name: Careful Dose
+            max-rank: 3
+            cost: 1
+            mechanic: potion-duration
+            value-per-rank: 0.03
+            description: Improve the duration of beneficial custom effects.
+            prerequisites: []
+            implemented: false
+      toxicology:
+        label: Toxicology
+        nodes:
+          toxicologist:
+            name: Toxicologist
+            max-rank: 3
+            cost: 1
+            mechanic: debuff-duration
+            value-per-rank: 0.03
+            description: Improve the duration of eligible debuff effects.
+            prerequisites: []
+            implemented: false
+          measured-toxin:
+            name: Measured Toxin
+            max-rank: 3
+            cost: 1
+            mechanic: potion-resistance
+            value-per-rank: 0.04
+            description: Improve your resistance to potion debuffs.
+            prerequisites: []
+            implemented: false
+      field-support:
+        label: Field Support
+        nodes:
+          restorative-draft:
+            name: Restorative Draft
+            max-rank: 3
+            cost: 1
+            mechanic: potion-heal
+            value-per-rank: 0.03
+            description: Improve healing from your eligible potions.
+            prerequisites: []
+            implemented: false
+          shared-dose:
+            name: Shared Dose
+            max-rank: 3
+            cost: 1
+            mechanic: trusted-support
+            value-per-rank: 0.03
+            description: Improve beneficial effects applied to nearby trusted allies.
+            prerequisites: []
+            implemented: false
+          emergency-vial:
+            name: Emergency Vial
+            max-rank: 3
+            cost: 1
+            mechanic: low-health-shield
+            value-per-rank: 1.0
+            description: A cooldown-limited defensive effect activates at low health.
+            prerequisites: []
+            implemented: false
+    actives:
+      infusion-burst:
+        name: Infusion Burst
+        type: AREA_HEAL
+        cooldown-seconds: 80
+        duration-seconds: 6
+        description: Apply a configurable beneficial effect to nearby trusted allies.
+        implemented: true
+        unlocked-by-default: true
+        radius: 7
+      alchemical-ward:
+        name: Alchemical Ward
+        type: POTION
+        cooldown-seconds: 65
+        duration-seconds: 8
+        description: Gain temporary resistance to hostile potion effects.
+        implemented: true
+        unlocked-by-default: true
+        potion-effect: FIRE_RESISTANCE
+        amplifier: 0
+  AVIATOR:
+    name: Aviator
+    category: UNASSIGNED
+    icon: WIND_CHARGE
+    allocation-cap: 30
+    branch-cap: 15
+    branches:
+      aerial-control:
+        label: Aerial Control
+        nodes:
+          steady-flight:
+            name: Steady Flight
+            max-rank: 3
+            cost: 1
+            mechanic: air-control
+            value-per-rank: 0.04
+            description: Improve control during configured airborne abilities.
+            prerequisites: []
+            implemented: false
+          soft-landing:
+            name: Soft Landing
+            max-rank: 3
+            cost: 1
+            mechanic: fall-resistance
+            value-per-rank: 0.06
+            description: Reduce fall damage.
+            prerequisites: []
+            implemented: false
+          wind-reader:
+            name: Wind Reader
+            max-rank: 3
+            cost: 1
+            mechanic: landing-sense
+            value-per-rank: 4.0
+            description: Receive a hint when a safe landing area is nearby.
+            prerequisites: []
+            implemented: false
+      updraft:
+        label: Updraft
+        nodes:
+          spring-step:
+            name: Spring Step
+            max-rank: 3
+            cost: 1
+            mechanic: jump-bonus
+            value-per-rank: 0.03
+            description: Improve jump height slightly.
+            prerequisites: []
+            implemented: false
+          rising-current:
+            name: Rising Current
+            max-rank: 3
+            cost: 1
+            mechanic: air-duration
+            value-per-rank: 0.05
+            description: Improve the duration of your upward movement effects.
+            prerequisites: []
+            implemented: false
+          featherweight:
+            name: Featherweight
+            max-rank: 3
+            cost: 1
+            mechanic: air-control
+            value-per-rank: 0.04
+            description: Reduce movement penalties while airborne.
+            prerequisites: []
+            implemented: false
+      explorer:
+        label: Explorer
+        nodes:
+          far-sight:
+            name: Far Sight
+            max-rank: 3
+            cost: 1
+            mechanic: scout-range
+            value-per-rank: 4.0
+            description: Improve scouting range.
+            prerequisites: []
+            implemented: false
+          traveler:
+            name: Traveler
+            max-rank: 3
+            cost: 1
+            mechanic: movement-bonus
+            value-per-rank: 0.02
+            description: Improve configured travel-speed effects.
+            prerequisites: []
+            implemented: false
+          safe-route:
+            name: Safe Route
+            max-rank: 3
+            cost: 1
+            mechanic: fall-resistance
+            value-per-rank: 0.05
+            description: Reduce fall damage after long travel.
+            prerequisites: []
+            implemented: false
+      windcraft:
+        label: Windcraft
+        nodes:
+          tailwind:
+            name: Tailwind
+            max-rank: 3
+            cost: 1
+            mechanic: speed-duration
+            value-per-rank: 0.04
+            description: Increase the duration of your speed effects.
+            prerequisites: []
+            implemented: false
+          gust-memory:
+            name: Gust Memory
+            max-rank: 3
+            cost: 1
+            mechanic: cooldown-reduction
+            value-per-rank: 0.02
+            description: Reduce the cooldown of aerial abilities slightly.
+            prerequisites: []
+            implemented: false
+          calm-descent:
+            name: Calm Descent
+            max-rank: 3
+            cost: 1
+            mechanic: slow-fall-duration
+            value-per-rank: 0.05
+            description: Improve slow-falling effects.
+            prerequisites: []
+            implemented: false
+    actives:
+      updraft:
+        name: Updraft
+        type: UPDRAFT
+        cooldown-seconds: 55
+        duration-seconds: 0
+        description: Short upward impulse
+        implemented: true
+        unlocked-by-default: true
+      featherfall:
+        name: Featherfall
+        type: POTION
+        cooldown-seconds: 70
+        duration-seconds: 8
+        description: Gain slow falling and safe landing time.
+        implemented: true
+        unlocked-by-default: true
+        potion-effect: SLOW_FALLING
+        amplifier: 0
+  ENCHANTER:
+    name: Enchanter
+    category: GRINDING
+    icon: ENCHANTING_TABLE
+    allocation-cap: 30
+    branch-cap: 15
+    branches:
+      arcane-knowledge:
+        label: Arcane Knowledge
+        nodes:
+          lorekeeper:
+            name: Lorekeeper
+            max-rank: 3
+            cost: 1
+            mechanic: enchant-xp
+            value-per-rank: 0.04
+            description: Improve configured enchantment rewards.
+            prerequisites: []
+            implemented: false
+          arcane-savings:
+            name: Arcane Savings
+            max-rank: 3
+            cost: 1
+            mechanic: enchant-cost
+            value-per-rank: 0.03
+            description: Reduce eligible enchanting costs.
+            prerequisites: []
+            implemented: false
+          mystic-focus:
+            name: Mystic Focus
+            max-rank: 3
+            cost: 1
+            mechanic: arcane-duration
+            value-per-rank: 0.04
+            description: Improve the duration of your arcane utility effects.
+            prerequisites: []
+            implemented: false
+      enchanting-efficiency:
+        label: Enchanting Efficiency
+        nodes:
+          efficient-table:
+            name: Efficient Table
+            max-rank: 3
+            cost: 1
+            mechanic: enchant-cost
+            value-per-rank: 0.03
+            description: Improve enchanting table efficiency.
+            prerequisites: []
+            implemented: false
+          lapis-saver:
+            name: Lapis Saver
+            max-rank: 3
+            cost: 1
+            mechanic: lapis-save
+            value-per-rank: 0.04
+            description: Chance to conserve lapis on configured operations.
+            prerequisites: []
+            implemented: false
+          bookbinder:
+            name: Bookbinder
+            max-rank: 3
+            cost: 1
+            mechanic: book-reward
+            value-per-rank: 0.04
+            description: Improve eligible book-related rewards.
+            prerequisites: []
+            implemented: false
+      mystic-discovery:
+        label: Mystic Discovery
+        nodes:
+          mystic-discovery:
+            name: Mystic Discovery
+            max-rank: 3
+            cost: 1
+            mechanic: enchanted-loot
+            value-per-rank: 0.03
+            description: Improve the chance of eligible enchanted loot.
+            prerequisites: []
+            implemented: false
+          old-knowledge:
+            name: Old Knowledge
+            max-rank: 3
+            cost: 1
+            mechanic: experience-bonus
+            value-per-rank: 0.03
+            description: Improve experience gained from eligible sources.
+            prerequisites: []
+            implemented: false
+          arcane-resonance:
+            name: Arcane Resonance
+            max-rank: 3
+            cost: 1
+            mechanic: enchant-ability
+            value-per-rank: 0.05
+            description: Improve your active enchantment ability.
+            prerequisites: []
+            implemented: false
+      overcharge:
+        label: Overcharge
+        nodes:
+          safe-overcharge:
+            name: Safe Overcharge
+            max-rank: 3
+            cost: 1
+            mechanic: ascension-cost
+            value-per-rank: 0.03
+            description: Reduce the resource cost of Enchantment Ascension.
+            prerequisites: []
+            implemented: false
+          stable-script:
+            name: Stable Script
+            max-rank: 3
+            cost: 1
+            mechanic: ascension-stability
+            value-per-rank: 0.04
+            description: Reduce the chance of configured enchantment side effects.
+            prerequisites: []
+            implemented: false
+          master-enchanter:
+            name: Master Enchanter
+            max-rank: 1
+            cost: 1
+            mechanic: enchant-max-level
+            value-per-rank: 1.0
+            description: Raise the configurable maximum level for eligible enchantments by one.
+            prerequisites: []
+            implemented: false
+    actives:
+      enchantment-ascension:
+        name: Enchantment Ascension
+        type: ENCHANT_ALL
+        cooldown-seconds: 180
+        duration-seconds: 6
+        description: Raise every eligible enchantment on a non-weapon utility item by exactly ONE level. Combat
+          weapons are not eligible.
+        implemented: false
+        unlocked-by-default: false
+        max-level: 6
+        include-unsafe-enchants: 'True'
+        levels-added: 1
+      arcane-surge:
+        name: Arcane Surge
+        type: POTION
+        cooldown-seconds: 90
+        duration-seconds: 12
+        description: Gain a short experience and luck boost.
+        implemented: true
+        unlocked-by-default: true
+        potion-effect: LUCK
+        amplifier: 0
+      ascension:
+        name: Ascension
+        type: ASCEND
+        cooldown-seconds: 180
+        duration-seconds: 0
+        description: Upgrade all eligible enchantments on held item by +1, atomically
+        implemented: true
+        unlocked-by-default: true
+  BEAST_TAMER:
+    name: Beast Tamer
+    category: PVP
+    icon: WOLF_SPAWN_EGG
+    allocation-cap: 30
+    branch-cap: 15
+    branches:
+      bonding:
+        label: Bonding
+        nodes:
+          deep-bond:
+            name: Deep Bond
+            max-rank: 3
+            cost: 1
+            mechanic: companion-health
+            value-per-rank: 0.05
+            description: Improve companion health.
+            prerequisites: []
+            implemented: false
+          loyal-companion:
+            name: Loyal Companion
+            max-rank: 3
+            cost: 1
+            mechanic: companion-duration
+            value-per-rank: 0.05
+            description: Companions stay effective for longer.
+            prerequisites: []
+            implemented: false
+          shared-instinct:
+            name: Shared Instinct
+            max-rank: 3
+            cost: 1
+            mechanic: companion-defense
+            value-per-rank: 0.02
+            description: You gain a small defensive bonus near your companions.
+            prerequisites: []
+            implemented: false
+      pack-leader:
+        label: Pack Leader
+        nodes:
+          pack-coordination:
+            name: Pack Coordination
+            max-rank: 3
+            cost: 1
+            mechanic: companion-capacity
+            value-per-rank: 1.0
+            description: Increase your configured companion limit.
+            prerequisites: []
+            implemented: false
+          call-response:
+            name: Call Response
+            max-rank: 3
+            cost: 1
+            mechanic: companion-command
+            value-per-rank: 0.05
+            description: Improve companion command response.
+            prerequisites: []
+            implemented: false
+          formation:
+            name: Formation
+            max-rank: 3
+            cost: 1
+            mechanic: companion-defense
+            value-per-rank: 0.03
+            description: Companions gain a small defensive bonus near you.
+            prerequisites: []
+            implemented: false
+      beast-training:
+        label: Beast Training
+        nodes:
+          wolf-training:
+            name: Wolf Training
+            max-rank: 3
+            cost: 1
+            mechanic: wolf-bonus
+            value-per-rank: 0.04
+            description: Improve wolf companion effectiveness.
+            prerequisites: []
+            implemented: false
+          mount-training:
+            name: Mount Training
+            max-rank: 3
+            cost: 1
+            mechanic: mount-bonus
+            value-per-rank: 0.03
+            description: Improve movement while riding a tamed mount.
+            prerequisites: []
+            implemented: false
+          specialist-training:
+            name: Specialist Training
+            max-rank: 3
+            cost: 1
+            mechanic: species-ability
+            value-per-rank: 0.04
+            description: Improve eligible creature special abilities.
+            prerequisites: []
+            implemented: false
+      survival-instinct:
+        label: Survival Instinct
+        nodes:
+          guardian-instinct:
+            name: Guardian Instinct
+            max-rank: 3
+            cost: 1
+            mechanic: companion-defense
+            value-per-rank: 0.03
+            description: Companions gain a small resistance bonus.
+            prerequisites: []
+            implemented: false
+          retreat-call:
+            name: Retreat Call
+            max-rank: 3
+            cost: 1
+            mechanic: companion-command
+            value-per-rank: 0.05
+            description: Improve the speed of companions returning to you.
+            prerequisites: []
+            implemented: false
+          last-paw:
+            name: Last Paw
+            max-rank: 3
+            cost: 1
+            mechanic: companion-recovery
+            value-per-rank: 1.0
+            description: A low-health companion receives a cooldown-limited defensive pulse.
+            prerequisites: []
+            implemented: false
+    actives:
+      companion-call:
+        name: Companion Call
+        type: COMPANION
+        cooldown-seconds: 100
+        duration-seconds: 6
+        description: Summon a configurable tameable companion that belongs to you.
+        implemented: false
+        unlocked-by-default: false
+        entity-type: WOLF
+        max-health: 24
+        damage-multiplier: 1.0
+      pack-rally:
+        name: Pack Rally
+        type: AREA_HEAL
+        cooldown-seconds: 75
+        duration-seconds: 8
+        description: Heal nearby owner/tamed animals
+        implemented: true
+        unlocked-by-default: true
+  ENGINEER:
+    name: Engineer
+    category: SUPPORT
+    icon: ANVIL
+    allocation-cap: 0
+    branch-cap: 0
+    branches:
+      mechanics:
+        label: Mechanics
+        nodes:
+          reinforced-frame:
+            name: Reinforced Frame
+            max-rank: 3
+            cost: 1
+            mechanic: planned
+            value-per-rank: 0.03
+            description: Planned machine/personal upgrade; requires later live machine implementation.
+            prerequisites: []
+            implemented: false
+          maintenance:
+            name: Maintenance
+            max-rank: 3
+            cost: 1
+            mechanic: planned
+            value-per-rank: 0.03
+            description: Planned machine/personal upgrade; requires later live machine implementation.
+            prerequisites: []
+            implemented: false
+          compact-design:
+            name: Compact Design
+            max-rank: 3
+            cost: 1
+            mechanic: planned
+            value-per-rank: 0.03
+            description: Planned machine/personal upgrade; requires later live machine implementation.
+            prerequisites: []
+            implemented: false
+      ballistics:
+        label: Ballistics
+        nodes:
+          ballistic-training:
+            name: Ballistic Training
+            max-rank: 3
+            cost: 1
+            mechanic: planned
+            value-per-rank: 0.03
+            description: Planned machine/personal upgrade; requires later live machine implementation.
+            prerequisites: []
+            implemented: false
+          precision-engineering:
+            name: Precision Engineering
+            max-rank: 3
+            cost: 1
+            mechanic: planned
+            value-per-rank: 0.03
+            description: Planned machine/personal upgrade; requires later live machine implementation.
+            prerequisites: []
+            implemented: false
+          rapid-cycle:
+            name: Rapid Cycle
+            max-rank: 3
+            cost: 1
+            mechanic: planned
+            value-per-rank: 0.03
+            description: Planned machine/personal upgrade; requires later live machine implementation.
+            prerequisites: []
+            implemented: false
+          ballistic-turret-unlock:
+            name: Ballistic Turret Unlock
+            max-rank: 1
+            cost: 1
+            mechanic: planned
+            value-per-rank: 0.03
+            description: Planned machine/personal upgrade; requires later live machine implementation.
+            prerequisites: []
+            implemented: false
+      demolition-engineering:
+        label: Demolition-Engineering
+        nodes:
+          structural-control:
+            name: Structural Control
+            max-rank: 3
+            cost: 1
+            mechanic: planned
+            value-per-rank: 0.03
+            description: Planned machine/personal upgrade; requires later live machine implementation.
+            prerequisites: []
+            implemented: false
+          explosive-specialist:
+            name: Explosive Specialist
+            max-rank: 3
+            cost: 1
+            mechanic: planned
+            value-per-rank: 0.03
+            description: Planned machine/personal upgrade; requires later live machine implementation.
+            prerequisites: []
+            implemented: false
+          explosive-turret-unlock:
+            name: Explosive Turret Unlock
+            max-rank: 1
+            cost: 1
+            mechanic: planned
+            value-per-rank: 0.03
+            description: Planned machine/personal upgrade; requires later live machine implementation.
+            prerequisites: []
+            implemented: false
+      advanced-technology:
+        label: Advanced-Technology
+        nodes:
+          specialist-core:
+            name: Specialist Core
+            max-rank: 3
+            cost: 1
+            mechanic: planned
+            value-per-rank: 0.03
+            description: Planned machine/personal upgrade; requires later live machine implementation.
+            prerequisites: []
+            implemented: false
+          advanced-targeting:
+            name: Advanced Targeting
+            max-rank: 3
+            cost: 1
+            mechanic: planned
+            value-per-rank: 0.03
+            description: Planned machine/personal upgrade; requires later live machine implementation.
+            prerequisites: []
+            implemented: false
+          advanced-turret-unlock:
+            name: Advanced Turret Unlock
+            max-rank: 1
+            cost: 1
+            mechanic: planned
+            value-per-rank: 0.03
+            description: Planned machine/personal upgrade; requires later live machine implementation.
+            prerequisites: []
+            implemented: false
+      personal-engineering:
+        label: Personal-Engineering
+        nodes:
+          reinforced-suit:
+            name: Reinforced Suit
+            max-rank: 3
+            cost: 1
+            mechanic: planned
+            value-per-rank: 0.03
+            description: Planned machine/personal upgrade; requires later live machine implementation.
+            prerequisites: []
+            implemented: true
+          quick-hands:
+            name: Quick Hands
+            max-rank: 3
+            cost: 1
+            mechanic: planned
+            value-per-rank: 0.03
+            description: Planned machine/personal upgrade; requires later live machine implementation.
+            prerequisites: []
+            implemented: false
+          field-technician:
+            name: Field Technician
+            max-rank: 3
+            cost: 1
+            mechanic: planned
+            value-per-rank: 0.03
+            description: Planned machine/personal upgrade; requires later live machine implementation.
+            prerequisites: []
+            implemented: false
+          combat-training:
+            name: Combat Training
+            max-rank: 3
+            cost: 1
+            mechanic: planned
+            value-per-rank: 0.03
+            description: Planned machine/personal upgrade; requires later live machine implementation.
+            prerequisites: []
+            implemented: false
+          lightweight-equipment:
+            name: Lightweight Equipment
+            max-rank: 3
+            cost: 1
+            mechanic: planned
+            value-per-rank: 0.03
+            description: Planned machine/personal upgrade; requires later live machine implementation.
+            prerequisites: []
+            implemented: false
+      maintenance-restoration:
+        label: Maintenance-Restoration
+        nodes:
+          repair-knowledge:
+            name: Repair Knowledge
+            max-rank: 3
+            cost: 1
+            mechanic: planned
+            value-per-rank: 0.03
+            description: Planned machine/personal upgrade; requires later live machine implementation.
+            prerequisites: []
+            implemented: false
+          experience-infuser-unlock:
+            name: Experience Infuser Unlock
+            max-rank: 1
+            cost: 1
+            mechanic: planned
+            value-per-rank: 0.03
+            description: Planned machine/personal upgrade; requires later live machine implementation.
+            prerequisites: []
+            implemented: false
+          infused-technology:
+            name: Infused Technology
+            max-rank: 1
+            cost: 1
+            mechanic: planned
+            value-per-rank: 0.03
+            description: Planned machine/personal upgrade; requires later live machine implementation.
+            prerequisites: []
+            implemented: false
+          medic-turret-unlock:
+            name: Medic Turret Unlock
+            max-rank: 1
+            cost: 1
+            mechanic: planned
+            value-per-rank: 0.03
+            description: Planned machine/personal upgrade; requires later live machine implementation.
+            prerequisites: []
+            implemented: false
+          regeneration-turret-unlock:
+            name: Regeneration Turret Unlock
+            max-rank: 1
+            cost: 1
+            mechanic: planned
+            value-per-rank: 0.03
+            description: Planned machine/personal upgrade; requires later live machine implementation.
+            prerequisites: []
+            implemented: false
+    actives:
+      combat-protocol:
+        name: Combat Protocol
+        type: SHIELD
+        cooldown-seconds: 90
+        duration-seconds: 6
+        description: Temporary personal combat defense
+        implemented: true
+        unlocked-by-default: true
+      overclock:
+        name: Overclock
+        type: HASTE
+        cooldown-seconds: 100
+        duration-seconds: 8
+        description: Short personal haste; machines integration planned
+        implemented: true
+        unlocked-by-default: true

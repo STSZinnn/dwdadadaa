@@ -1,0 +1,33 @@
+# Transparent source-code implementation coverage as of 0.1.1-alpha.
+implemented:
+  - UUID-based persistent player data, point accounting, trusts, and cooldowns
+  - Twelve-class selection with first-join picker and confirmed starter kits
+  - Player helpbook, skill tree GUI, class confirmation, and admin item GUI
+  - Data-driven 12 class registry with branch/node rank costs and states
+  - Skill point earning from natural ore breaks with persistent placed-ore tracking
+  - Owner-tagged Guardian Shield return on respawn and anti-transfer checks
+  - Custom reset/refund tokens with owner-safe confirmation
+  - Preliminary vanilla-event Infinite TNT behavior with explosive block damage disabled by default
+  - Action-bar ability feedback, two loadout slots and server-side cooldown validation
+  - Selected real active effects including Haste, Shields, Healing and Assassin model hiding
+  - Alchemist potion infusion prototype via main-hand/offhand + Infusium
+  - Enchanter all-enchantments-plus-one preview and atomic upgrade
+  - Admin config edit commands with backups and reload that never resets player progression
+partial:
+  - Passive implementations (registry tracks all, only selected implemented nodes purchasable)
+  - Exact protection-plugin compatibility (world rules and vanilla event cancellations only)
+  - True invisibility (entity model and gear hidden; packet-level audio/metadata not implemented)
+  - Alchemist potion debuff trust protection (direct splash events only; lingering effects not covered)
+  - Silent Effects passive (listed but disabled pending precise particle suppression)
+  - Bombardeer TNT (explosion disabled by default; check claims before enabling)
+  - Skill tree design (several branches / rank values are proposals or alpha drafts)
+not-yet-implemented:
+  - Full skills and live mechanics for every registry node
+  - Bombardeer detailed 24-node standalone tree (referenced in the uploads but not supplied here), plus all 6 unique actives
+  - Archer dedicated finalized PvP tree and weapon abilities
+  - Engineer Wrench crafting tiers, unlockable machines, targeting and XP Infuser
+  - Beast Tamer full multi-species companion behaviors and persistent AI
+  - Silent Movement selective sound packets and full custom Infused status display
+  - Villager purchase offers, all custom item recipes, world-protection plugin hooks
+  - Complete admin GUI configuration, unlock graph, skill tree node dependencies
+  - Multiplayer build and in-game test

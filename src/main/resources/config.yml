@@ -1,0 +1,54 @@
+# Provisional defaults: tune for your server. Player progress is stored separately.
+progression:
+  starting-points: 3
+  total-allocated-cap: 30
+  branch-allocated-cap: 15
+  natural-ore-breaks-per-point: 24
+  engineer-branch-unlock-cost: 2
+  enabled: true
+first-join:
+  gui-delay-ticks: 40
+ability:
+  slots: 2
+  require-equipped: true
+  prevent-use-in-protected-worlds: true
+  disabled-worlds: []
+  allow-while-spectator: false
+infinite-tnt:
+  enabled: true
+  fuse-ticks: 80
+  cooldown-ticks: 40
+  block-damage: false
+  fire: false
+  max-active-per-player: 3
+  # Off by default until protection integration is verified.
+  require-vanilla-placement: true
+potions:
+  infusium-zombie-drop-chance: 0.015
+  infusium-villager-offers: false # future phase; avoids modifying normal trades unexpectedly
+  negative-effects: [POISON, WITHER, INSTANT_DAMAGE, WEAKNESS, SLOWNESS, BLINDNESS, LEVITATION]
+  combine-requires-alchemist: true
+  infusion-uses-custom-effects: true
+true-invisibility:
+  duration-seconds: 8
+  stop-on-damage: true
+  stop-on-attack: true
+  hide-from-staff: false
+  cooldown-seconds: 90
+enchanter:
+  ascension-xp-level-cost: 5
+  max-enchant-level: 6
+  allow-above-vanilla-max: false
+  excluded-enchantments: []
+guardian:
+  auto-replace-bound-shield: true
+  allow-other-player-to-hold-bound-shield: false
+trust:
+  protect-from-all-ultrabound-damage: true
+vfx:
+  enabled: true
+  particle-count: 8
+engineer:
+  mechanics-first-branch-free: true
+  medical-supply-mode: Infinite
+  machines-enabled: false # Machine system pending; never simulate a working turret.

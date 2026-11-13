@@ -1,0 +1,15 @@
+name: Ultrabound
+version: 0.1.1-alpha
+main: dev.ultrabound.UltraboundPlugin
+api-version: '1.21.11'
+author: Ultrabound SMP
+description: Class progression and custom systems foundation for Ultrabound SMP
+commands:
+  ultrabound:
+    description: Ultrabound SMP main command
+    usage: /ultrabound helpbook
+    aliases: [ub]
+permissions:
+  ultrabound.admin:
+    description: Admin tools for Ultrabound
+    default: op
